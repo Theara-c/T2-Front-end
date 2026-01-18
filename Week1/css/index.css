@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 3rem;
+    background-color: antiquewhite;
+    position: sticky;
+    top:0;
+    z-index: 1000000;
+
+}
+.logo {
+    display:flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.option {
+    display: flex;
+    gap: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+.active {
+    background-color: blueviolet;
+    color: white;
+
+}
+a div {
+    border: 1px solid black;
+    padding: 0.5rem;
+
+}
+img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-top: 50px;
+    
+}
+a:hover {
+    background-color: blueviolet;
+    color: white;
+}
