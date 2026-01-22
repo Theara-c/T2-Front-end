@@ -6,10 +6,10 @@
 // TODO:
 // - Update the data strucure and the functions to manage those new properties
 const STUDENTS_DATA = [
-  { firstName: "An", age: 20 },
-  { firstName: "Bình", age: 22 },
-  { firstName: "Cẩm", age: 21 },
-  { firstName: "An", age: 19 }, // Duplicate first name !
+  { firstName: "An", lastname: "na", age: 20, batch: "A"},
+  { firstName: "Bình", lastname: "how",age: 22, batch: "B" },
+  { firstName: "Cẩm", lastname:"dia",age: 21, batch: "A" },
+  { firstName: "An", lastname: "halo",age: 19, batch: "A" }, // Duplicate first name !
 ];
 
 
@@ -18,8 +18,8 @@ const STUDENTS_DATA = [
  * @param {string} firstName - the student first name
  * @param {age} newAge  - the student new age
  */
-function updateStudentAge(firstName, newAge) {
-  let student = STUDENTS_DATA.find((s) => s.firstName === firstName);
+function updateStudentAge(firstName, lastName, batch, newAge) {
+  let student = STUDENTS_DATA.find((s) => (( s.lastname === lastName) && (s.firstName === firstName) && (s.batch === batch)));
   if (student) {
     student.age = newAge;
   }
@@ -27,7 +27,7 @@ function updateStudentAge(firstName, newAge) {
 
 
 // 1 - Update An age to 30
-updateStudentAge("An", 30);
+updateStudentAge("An","halo", "A", 30);
 
 // 2 - Print the updated data
 console.log(JSON.stringify(STUDENTS_DATA));
